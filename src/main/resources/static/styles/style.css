@@ -1,0 +1,63 @@
+#container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+ul.a {
+    list-style-type: none;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+a.button{
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.5em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:600;
+    font-size: 16px;
+    color:#FFFFFF;
+    background-color:#ff9300;
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+a.button:hover{
+    background-color:#e68600;
+}
+@media all and (max-width:30em){
+    a.button{
+        display:block;
+        margin:0.2em auto;
+    }
+}
+
+.input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ff9300;
+    font-family: my-open-sans;
+    font-size: 16px;
+}
+
+.select {
+    width: 100px;
+    padding: 3px 33px;
+    font-weight:600;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #ff9300;
+}
+
+@font-face { font-family: my-open-sans;
+    src: url('../font/OpenSans/OpenSans-Regular.ttf'); }
+body{
+    font-family: my-open-sans;
+}

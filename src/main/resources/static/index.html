@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>MyApp</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div id="app">
+    <h3>Калькулятор</h3>
+    <div id="container">
+        <input class="input" type="number" v-model="calculation.first_operand">
+        <select class="select" id="operations">
+            <option value="+">+</option>
+            <option value="-" selected>-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input class="input" type="number" v-model="calculation.second_operand">
+        <a class="button" v-on:click="Post()"><span>=</span></a>
+        <input class="input" type="number" v-model="calculation.result" readonly="true">
+        <br>
+        <p><b>История операций</b></p>
+        <ul class="a">
+            <li v-for="calc in calculations">
+                {{ calc.operation_string }}
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>
